@@ -1,0 +1,117 @@
+body, h1, h2, h4, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff39a;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #b70000;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    max-width: 200px;
+    height:fit-content;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.a{
+    padding:50px;
+}
+.box {
+    width: 420px;
+    background:rgba(255, 144, 144, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px 30px;
+    margin-left: 32.5%;
+    border-color: #ff2e2e;
+}
+  
+.text {
+    text-align: center;
+    font-size: medium;
+    color: black;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 65%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  padding: 20px 45px 20px 20px;
+}
+
+#showPasswordButton {
+  background-color: white;
+  cursor: pointer;
+}
+
+.password-container {
+    position: relative;
+ }
+  
+.password-container i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-215%);
+    cursor: pointer;
+}
+  
+.password-container i.bi-eye-slash {
+    color: black;
+}
+  
+.password-container i.bi-eye {
+    color: green;
+}
+
+.box .btn {
+    width: 60%;
+    height: 45px;
+    background:#b70000;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(189, 0, 0, 0.3);
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    background-color: #b70000;
+    color: white;
+    padding: 10px 0;
+    margin-top: 4.6%;
+}
+.register-link {
+    margin-top: 20px;
+}

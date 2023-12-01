@@ -1,0 +1,154 @@
+body, h1, h2, h4, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff39a;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #b70000;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img {
+    max-width: 200px;
+    height:fit-content;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.venue-list {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.venue-list h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+#list{
+    list-style: none;
+}
+.venue {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.venue img {
+    width: 500px;
+    height: 300px;
+    transition: transform .2s;
+}
+
+.venue img:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5); 
+}
+
+.venue h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #b70000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+button {
+    background-color: #b70000;
+    color: #fff;
+    padding: 10px 20px;
+}
+button:hover {
+    background-color: #ff0000;
+    padding: 10px 30px;
+}
+#bid {
+    color: rgb(0, 194, 0);
+    font-size: 30px;
+    text-align: center;
+}
+
+.hero {
+    text-align: center;
+    padding: 20px 10px;
+    border: 5px solid #b70000;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #b70000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

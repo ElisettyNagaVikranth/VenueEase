@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css"> <!-- Include your payment page styles -->
+    <title>Payment - Venue Ease</title>
+</head>
+<body>
+    <header>
+        <img src="logo1-bg.png">
+        <nav>
+            <ul>
+                <li><a href="customer.html">Dashboard</a></li>
+                <li><a href="add_venue.html">Add Venue</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="logout.html">LogOut</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="payment-form">
+        <h2>Payment</h2>
+        
+        <!-- Payment details form -->
+        <form id="payment-details" class="payment-details">
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+            
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+            
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" placeholder="123" required>
+            
+            <label for="billing-address">Billing Address:</label>
+            <textarea id="billing-address" name="billing-address" placeholder="Enter your billing address" required></textarea>
+            
+            <br><button type="submit">Pay Now</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Venue Ease</p>
+    </footer>
+    <script>
+        document.getElementById("payment-details").addEventListener("submit", function(event) {
+            event.preventDefault()
+            window.location.href = 'confirmation.html';
+        });
+    </script>
+</body>
+</html>

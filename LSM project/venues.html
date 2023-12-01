@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="venues.css">
+    <title>Venues - Venue Ease</title>
+</head>
+
+<body>
+    <header>
+        <img src="logo1-bg.png">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="venues.html">Venues</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="venue-list">
+        <h2>Discover Venues</h2>
+        <div class="hero">
+            <h2>Find the Perfect Venue</h2>
+            <form id="show">
+                <input type="text" id="locationInput" placeholder="Location" required>
+                <input type="date" id="dateInput" placeholder="Date" required>
+                <input type="number" id="capacityInput" placeholder="Guests" required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div id="get"></div>
+        <ul id="list">
+            <li class="venue" id="1">
+                <h3>Aadya Farms & Leisure</h3>
+                <img src="https://image.wedmegood.com/resized/450X/uploads/member/589919/1693402723_2021_09_17.jpg">
+                <p><b>Description:</b>Aadya Farms &amp; Leisure Bangalore, started in 2018, gives you a luxurious and
+                    stylish farmhouse that has a unique infrastructure with eye-catching interiors and architecture.
+                    Their attractive farmhouse is surrounded by some beautiful locations around.<br>The farm is located
+                    in Yelahanka, Bangalore, in the state of Karnataka.</p>
+                <p><b>Location:</b>Bangalore</p>
+                <p><b>Capacity:</b> 400 guests</p>
+                <p><b>Price:</b>&#8377 500000</p>
+                <p><b>Venue Owner Number:</b> +91 9945069999</p>
+                <p id="10"></p>
+                <button onclick="pleaselogin()">Book</button>
+            </li>
+            <li class="venue" id="2">
+                <h3>The Tamarind Tree</h3>
+                <img
+                    src="https://image.wedmegood.com/resized/450X/uploads/member/14465/1540377146_IMG_20181024_WA0001.jpg?crop=7,1,1265,712">
+                <p><b>Description:</b>The address is 88, Avalahalli Kanakapura Rd, Royal Park Residency Layout 2, JP
+                    Nagar 9th Phase, J. P. Nagar, Bengaluru, Karnataka 560108</p>
+                <p><b>Location:</b>Bangalore</p>
+                <p><b>Capacity:</b> 150 guests</p>
+                <p><b>Price:</b>&#8377 150000</p>
+                <p><b>Venue Owner Number:</b> +91 9888399994</p>
+                <p id="20"></p>
+                <button onclick="pleaselogin()">Book</button>
+            </li>
+            <li class="venue" id="3">
+                <h3>The Palace house</h3>
+                <img
+                    src="https://image.wedmegood.com/resized/450X/uploads/member/548933/1593262104_2.jpg?crop=217,292,1621,912">
+                <p><b>Description:</b>The address is 136/49, Sai Baba Kovil St, Cholamandal Artists Village,
+                    Injambakkam, Chennai, Tamil Nadu 600115</p>
+                <p><b>Location:</b>Chennai</p>
+                <p><b>Capacity:</b> 200 guests</p>
+                <p><b>Price:</b>&#8377 200000</p>
+                <p><b>Venue Owner Number:</b> +91 9789551155</p>
+                <p id="30"></p>
+                <button onclick="pleaselogin()">Book</button>
+            </li>
+            <li class="venue" id="4">
+                <h3>Athidhi Banquet Hall</h3>
+                <img src="https://image.wedmegood.com/resized/450X/uploads/member/828226/1573740007_Screenshot_2.jpg">
+                <p><b>Description:</b>The address is Near, Allwyn Cross roads, Widia Colony, Hafeezpet, Miyapur,
+                    Hyderabad, Telangana 500049</p>
+                <p><b>Location:</b>Hyderabad</p>
+                <p><b>Capacity:</b> 100 guests</p>
+                <p><b>Price:</b>&#8377 100000</p>
+                <p><b>Venue Owner Number:</b> +91 9246175678</p>
+                <p id="40"></p>
+                <button onclick="pleaselogin()">Book</button>
+            </li>
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2023 Venue Ease</p>
+    </footer>
+    <script>
+        function pleaselogin() {
+            var text = "For Booking please login";
+            if (confirm(text) == true) {
+                window.location.href = "login.html";
+            }
+        }
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = today.getMonth() + 1;
+        const day = today.getDate();
+        const formattedDate = `${day}-${month}-${year}`;
+        const endDate = `${month}-${year}`;
+        var i;
+        for (i = 1; i < 5; i++) {
+            var fday = 1 + Math.floor(Math.random() * 14);
+            var lday = 16 + Math.floor(Math.random() * 15);
+            var vid = 10 * i;
+            if (fday > lday) {
+                i = i - 1;
+                continue;
+            }
+            if (fday <= day && lday >= day) {
+                document.getElementById(vid).innerHTML = 'Available from ' + formattedDate + ' to ' + lday + '-' + endDate;
+                document.getElementById(vid).style.color = 'green';
+            } else if (fday >= day && lday >= day) {
+                document.getElementById(vid).innerHTML = 'Available from ' + fday + '-' + endDate + ' to ' + lday + '-' + endDate;
+                document.getElementById(vid).style.color = 'green';
+            } else if (fday == lday && fday >= day) {
+                document.getElementById(vid).innerHTML = 'Available from ' + fday + '-' + endDate;
+                document.getElementById(vid).style.color = 'green';
+            } else {
+                document.getElementById(vid).innerHTML = 'Not Available';
+                document.getElementById(vid).style.color = 'red';
+            }
+        }
+        function showContent(event) {
+            event.preventDefault();
+            const capacity = document.getElementById("capacityInput").value;
+            const price = 50000 + capacity * 50;
+            const location = document.getElementById("locationInput").value;
+            const dateInput = document.getElementById("dateInput").value;
+            const dateParts = dateInput.split('-');
+            const date = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
+            if (location.match(/Bangalore/i)) {
+                document.getElementById('3').style.display = 'none';
+                document.getElementById('4').style.display = 'none';
+                document.getElementById('1').style.display = 'block';
+                document.getElementById('2').style.display = 'block';
+            } else if (location.match(/Chennai/i)) {
+                document.getElementById('1').style.display = 'none';
+                document.getElementById('4').style.display = 'none';
+                document.getElementById('2').style.display = 'none';
+                document.getElementById('3').style.display = 'block';
+            } else if (location.match(/hyderabad/i)) {
+                document.getElementById('1').style.display = 'none';
+                document.getElementById('2').style.display = 'none';
+                document.getElementById('3').style.display = 'none';
+                document.getElementById('4').style.display = 'block';
+            }
+            else {
+                document.getElementById("list").innerHTML = '';
+                const contentDiv = document.createElement("div");
+                contentDiv.innerHTML = `<h3>Venue Name</h3>
+                                    <img src="https://media.weddingz.in/images/ff5511dca7abe120d74c264b81a11cea/top-large-capacity-wedding-venues-in-mumbai-for-your-big-fat-indian-wedding.jpg">
+                                    <p><b>Description of Venue</b>: Experience elegance and versatility at our stunning venue. Ideal for weddings, corporate events, and more.</p>
+                                    <p><b>Location</b>: ${location}</p>
+                                    <p><b>Capacity</b>: ${capacity} guests</p>
+                                    <p><b>Price</b>:&#8377 ${price}</p>
+                                    <p><b>Avaliable for this date</b>: ${date}</p>
+                                    <p><b>Phone Number</b>: 968-565-8984</p>`;
+                const contentContainer = document.getElementById("get");
+                contentContainer.innerHTML = '';
+                contentContainer.appendChild(contentDiv);
+            }
+        }
+        const showContentButton = document.getElementById("show");
+        showContentButton.addEventListener("submit", showContent);
+    </script>
+</body>
+
+</html>

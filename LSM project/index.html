@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Venue Ease</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo1-bg.png">
+            <div>
+                <h1>VenueEase</h1>
+                <h4>Simplifying Party Venue Booking for Seamless Event Planning</h4>
+            </div>
+        </div>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="venues.html">Venues</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="hero">
+        <h2>Find the Perfect Venue</h2>
+        <p>Discover and book venues for your special events.</p>
+        <form id="show">
+            <input type="text" id="locationInput" placeholder="Location" required>
+            <input type="date" id="dateInput" placeholder="Date" required>
+            <input type="number" id="capacityInput" placeholder="Guests" required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <div class="featured-venues">
+        <h2>Featured Venues</h2>
+        <div id="get"></div>
+    </div>
+
+    <div class="intro">
+        <h1>Welcome to Venue Ease</h1><br>
+        <h2>About the Website</h2><br>
+        <p>At Venue Ease, we understand that finding the perfect venue for your special event can be a challenging task. That's why we've created a user-friendly and comprehensive platform designed to make your event planning journey a breeze.</p>
+
+        <p>Our mission is simple: to connect you with a wide array of venues that suit your unique needs and preferences. Whether you're organizing a wedding, a corporate conference, a birthday celebration, or any other event, Venue Ease is your go-to resource for discovering and booking the ideal space.</p>
+
+        <p>With Venue Ease, you can:</p>
+        <ul>
+            <li>Browse a Diverse Selection: Explore an extensive range of venues, from elegant ballrooms to charming outdoor settings, all at your fingertips.</li>
+            <li>Transparent and Hassle-Free: Say goodbye to hidden fees and unclear pricing. We believe in transparency, so you can trust that the pricing and booking process is straightforward and fair.</li>
+            <li>Empowering Decisions: Access detailed venue information, including high-quality photos, customer reviews, and ratings, to make informed decisions with confidence.</li>
+            <li>Real-Time Availability: Check venue availability in real-time, so you can secure your preferred date and time without delay.</li>
+            <li>Secure Booking: Rest easy knowing that our platform prioritizes the security of your personal and payment information.</li>
+            <li>Expert Support: Our dedicated customer support team is here to assist you at every step, ensuring your experience is smooth and enjoyable.</li>
+        </ul>
+
+        <p>At Venue Ease, we're passionate about helping you create memorable moments. Whether it's an intimate gathering or a grand celebration, we're here to make your event planning journey a joyous one.</p>
+
+        <p>Let Venue Ease simplify your venue booking process and bring your event dreams to life. Start your journey with us today!</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Venue Booking</p>
+    </footer>
+    <script>
+        function showContent(event) {
+            event.preventDefault();
+            const capacity = document.getElementById("capacityInput").value;
+            const price=50000+capacity*50;
+            const location = document.getElementById("locationInput").value;
+            const dateInput = document.getElementById("dateInput").value;
+            const dateParts = dateInput.split('-');
+            const date = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
+            const contentDiv = document.createElement("div");
+            contentDiv.innerHTML = `<h3>Venue Name</h3>
+                                    <img src="https://media.weddingz.in/images/ff5511dca7abe120d74c264b81a11cea/top-large-capacity-wedding-venues-in-mumbai-for-your-big-fat-indian-wedding.jpg">
+                                    <p><b>Description of Venue</b>: Experience elegance and versatility at our stunning venue. Ideal for weddings, corporate events, and more.</p>
+                                    <p><b>Location</b>: ${location}</p>
+                                    <p><b>Capacity</b>: ${capacity} guests</p>
+                                    <p><b>Price</b>: rs.${price}</p>
+                                    <p><b>Avaliable for this date</b>: ${date}</p>
+                                    <p><b>Phone Number</b>: 968-565-8984</p>`;
+            const contentContainer = document.getElementById("get");
+            contentContainer.innerHTML = '';
+            contentContainer.appendChild(contentDiv);
+        }
+        const showContentButton = document.getElementById("show");
+        showContentButton.addEventListener("submit", showContent);
+    </script>
+</body>
+</html>

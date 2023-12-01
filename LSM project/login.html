@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <title>Venue Ease - Login</title>
+</head>
+
+<body>
+    <header>
+        <img src="logo1-bg.png">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="venues.html">Venues</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="a">
+        <form id="login-form">
+            <div class="box">
+                <div class="text">
+                    <h2 style="font-size: 300%;">Login</h2>
+                    <input type="text" id="username" name="username" placeholder="Username" />
+                    <br><br>
+                    <div class="password-container">
+                        <input type="password" id="pwd" name="pwd" placeholder="Password" />
+                        <i class="bi bi-eye-slash" id="showPasswordButton" onclick="togglePasswordVisibility(this)"></i>
+                    </div>
+                    <br><br>
+                    <button type="submit" class="btn">Log In</button>
+                    <div class="register-link">
+                        <p>Dont have an account? <a href="signup.html">Register</a></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("pwd").value;
+
+            const storedUsername = localStorage.getItem('un');
+            const storedPassword = localStorage.getItem('pwd');
+            if (username === "vikranth" && password === "Vikki@123") {
+                window.location.href = 'customer.html';
+            } else if (username === "anirudh" && password === "Ani$$147") {
+                window.location.href = 'owner.html';
+            }
+            else if (username === storedUsername && password === storedPassword) {
+                const userType = localStorage.getItem('ut');
+                if (userType === 'customer') {
+                    window.location.href = 'customer.html';
+                } else if (userType === 'owner') {
+                    window.location.href = 'owner.html';
+                }
+            } else {
+                alert("Invalid Username or Password");
+            }
+        });
+
+        function togglePasswordVisibility(icon) {
+            const passwordInput = document.getElementById("pwd");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                icon.classList.remove("bi-eye-slash");
+                icon.classList.add("bi-eye");
+            } else {
+                passwordInput.type = "password";
+                icon.classList.remove("bi-eye");
+                icon.classList.add("bi-eye-slash");
+            }
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Venue Ease</p>
+    </footer>
+</body>
+
+</html>

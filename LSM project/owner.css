@@ -1,0 +1,130 @@
+/* Apply styles to the body and header */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff39a;
+}
+
+header {
+    background-color: #b70000;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    max-width: 200px;
+    height:fit-content;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+.owner-dashboard {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.owner-dashboard h2 {
+    margin: 0;
+}
+
+.transactions {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid grey;
+}
+form input[type="text"],
+form input[type="number"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 16px;
+}
+.venue-list {
+    margin-top: 20px;
+}
+
+.venue-list h3 {
+    margin: 10px 0;
+}
+
+.venue-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.venue-list li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.booking-list {
+    margin-top: 20px;
+}
+
+.booking-list h3 {
+    margin: 10px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #8f8f8f;
+}
+
+table th {
+    background-color: #b70000;
+    color: white;
+}
+
+table tr {
+    background-color:#fff39a;
+}
+
+button {
+    background-color: #b70000;
+    color: #fff;
+    padding: 10px 20px;
+}
+button:hover {
+    background-color: #ff0000;
+    padding: 10px 30px;
+}
+
+footer {
+    text-align: center;
+    background-color: #b70000;
+    color: white;
+    padding: 10px 0;
+}
+

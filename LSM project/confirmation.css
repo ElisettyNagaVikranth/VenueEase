@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff39a;
+}
+header {
+    background-color: #b70000;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    max-width: 200px;
+    height:fit-content;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.confirmation-message {
+    max-width: 400px;
+    margin:10px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-message h2 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.confirmation-message p {
+    margin: 10px 0;
+}
+
+.confirmation-message p span {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #b70000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}

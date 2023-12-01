@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <title>Customer Profile - Venue Ease</title>
+</head>
+<body>
+    <header>
+        <img src="logo1-bg.png">
+        <nav>
+            <ul>
+                <li><a href="customer.html">Dashboard</a></li>
+                <li><a href="venues_customer.html">Venues</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="profile">
+        <h2>Customer Profile</h2>
+        
+        <div class="user-info">
+            <h3>User Information</h3>
+            <p><strong>Name:</strong> Naga Vikranth</p>
+            <p><strong>Email:</strong> vikki@gmail.com</p>
+            <p><strong>Username:</strong> vikranth</p>
+            <p><strong>Phone:</strong> 9491-262103</p>
+        </div>
+
+        <div class="order-history">
+            <h3>Order History</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Venue</th>
+                        <th>Total Amount</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12345678</td>
+                        <td>2023-10-15</td>
+                        <td>Location 1</td>
+                        <td>Venue Name 1</td>
+                        <td>Rs.100000</td>
+                        <td><button onclick="cancelOrder(12345678, this)">Cancel</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Venue Ease</p>
+    </footer>
+
+    <script>
+        function cancelOrder(bookingId ,button) {
+            alert("Booking ID " + bookingId + " has been canceled.");
+            var row = button.closest("tr");
+            row.remove();
+        }
+    </script>
+</body>
+</html>
